@@ -80,3 +80,5 @@ Give Stretch Tasks a shot **ONLY** after requirements have been met. Completion 
 - Stretch task: Tina is an `EmergencyDispatcher`. She is a trained medical professional and a first responder. She also has great people skills and can answer calls and manage what ambulance gets sent to a situation. She sometimes joins the crew and responds to calls on the fly. Add her as an employee and give her the proper functionality. This job pays 45,000.
 - Stretch task: Through user input, type search for an employee by name and access their info/what they are doing
 - Stretch task: add an employee, fire an employee
+
+Monday 9/16/19 - Created Receptionist branch
