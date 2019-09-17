@@ -1,7 +1,10 @@
 package u_clinic_hospital;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-
+import org.hamcrest.Matchers.*;
+import org.hamcrest.CoreMatchers.*;
+import org.hamcrest.comparator.*;
 import org.junit.Test;
 
 public class ReceptionistTest {
@@ -29,13 +32,16 @@ public class ReceptionistTest {
 		int result = underTest.getEmployeeNumber();
 
 		assertEquals(employeeNumberExpected, result);
-	
-//				Receptionist underTest = new Receptionist("Arnold Schwarzenegger");
-//				underTest.setEmployeeNumber(14);
-//				int result = underTest.getEmployeeNumber();
-//				assertEquals(14, result);
 	}
 
+	private void testReceptionistNotAvailable() {
+		Receptionist underTest = new Receptionist("Bruce Willis");
+		boolean expected = underTest.isOnPhoneNotAvailable();
+		assertEquals(expected, false);
+
+		
+
+	}
 		
 		
 		

@@ -12,9 +12,9 @@ public class Receptionist {
 	private String name;
 	private int employeeNumber;
 	private int salary = 45000;
-	private boolean ifPaidThenTrue;
-
-	private boolean ifTalkingOnPhoneThenTrue;
+	private boolean ifPaid = true;
+	// Is receptionist on phone or available?
+	private boolean isAvailable = true;
 	
 	public Receptionist(String receptionistName) {
 		this.name = receptionistName;
@@ -39,6 +39,12 @@ public class Receptionist {
 		return this.employeeNumber;
 	}
 
+	public boolean isOnPhoneNotAvailable() {
+		this.isAvailable = false;
+		return isAvailable;
+	}
+
+	
 //	
 //	public String getName() {
 //		return name;
