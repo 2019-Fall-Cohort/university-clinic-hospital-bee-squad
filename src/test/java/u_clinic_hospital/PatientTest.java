@@ -14,6 +14,7 @@ public class PatientTest {
 		Patient underTest = new Patient("Test Name");
 		assertEquals("Patient: Test Name", underTest.toString());
 	}
+	
 	@Test
 	public void patientShouldHaveBloodLevelAndHealthLevelDefaults() throws Exception {
 		
