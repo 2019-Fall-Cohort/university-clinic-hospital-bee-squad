@@ -7,13 +7,6 @@ import org.junit.Test;
 public class JanitorTest {
 
 	@Test
-	public void shouldBeAbleToCreateEmpJanitor() throws Exception {
-		Employee underTest = new Janitor("Test Janitor");
-		String expected = underTest.getName();
-		assertThat(expected, is("Test Janitor"));
-	}
-
-	@Test
 	public void janitorSalaryIsFortyK() throws Exception {
 		Janitor underTest = new Janitor("Test Janitor");
 		int testSalary = underTest.getSalary();
