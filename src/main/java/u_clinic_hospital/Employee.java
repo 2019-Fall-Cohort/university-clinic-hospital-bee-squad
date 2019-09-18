@@ -4,37 +4,28 @@ public class Employee {
 
 	private String name;
 	private int empNumber;
-	private int salary;
 	private boolean hasBeenPaid = false;
-	
+
 	public Employee(String name) {
 		this.name = name;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setEmpNumber(int numberToSet) {
 		this.empNumber = numberToSet;
 	}
-	
+
 	public int getEmpNumber() {
 		return empNumber;
-	}
-	
-	public void setSalary(int salaryToSet) {
-		this.salary = salaryToSet;
-	}
-	
-	public int getSalary() {
-		return salary;	
 	}
 
 	public boolean getHasBeenPaid() {
 		return hasBeenPaid;
 	}
-	
+
 	public void paySalary() {
 		this.hasBeenPaid = true;
 	}
