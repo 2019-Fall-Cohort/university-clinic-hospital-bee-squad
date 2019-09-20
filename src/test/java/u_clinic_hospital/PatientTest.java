@@ -10,7 +10,7 @@ import org.junit.Test;
 public class PatientTest {
 
 	@Test
-	public void patientToStringShouldReferToStudentName() {
+	public void patientToStringShouldReferToPatientName() {
 		Patient underTest = new Patient("Test Name");
 		assertEquals("Patient: Test Name", underTest.toString());
 	}
