@@ -19,10 +19,31 @@ public class PatientTest {
 	public void patientShouldHaveBloodLevelAndHealthLevelDefaults() throws Exception {
 		
 		Patient underTest = new Patient("testPatient");
-		int underTestBlood = Patient.getBloodLevel(underTest);
-		int underTestHealth = Patient.getHealthLevel(underTest);
+		int underTestBlood = underTest.getBloodLevel();
+		int underTestHealth = underTest.getHealthLevel();
 		assertThat(underTestBlood, is(20));
 		assertThat(underTestHealth, is(10));
 	}
 	
+	@Test
+	public void patientBLandHLShouldChangeWithDoctorBloodDraw() throws Exception {
+		Patient underTest = new Patient("Test Patient");
+		Doctor testDoctor = new Doctor("Test Doctor");
+		testDoctor.drawBlood(underTest, 4);
+		int underTestBloodLevel = underTest.getBloodLevel();
+		int underTestHealthLevel = underTest.getHealthLevel();
+		assertThat(underTestBloodLevel, is(16));
+		assertThat(underTestHealthLevel, is(18));
+	}
+	
+	@Test
+	public void patientBLandHLShouldChangeWithNurseBloodDraw() throws Exception {
+		Patient underTest = new Patient("Test Patient");
+		Nurse testNurse = new Nurse("Test Nurse");
+		testNurse.drawBlood(underTest, 4);
+		int underTestBloodLevel = underTest.getBloodLevel();
+		int underTestHealthLevel = underTest.getHealthLevel();
+		assertThat(underTestBloodLevel, is(16));
+		assertThat(underTestHealthLevel, is(14));
+	}
 }
