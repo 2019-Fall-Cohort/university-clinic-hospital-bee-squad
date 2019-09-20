@@ -9,7 +9,7 @@ public class UniversityHospitalApp {
 
 	public static void main(String[] args) {
 
-		//proof of concept display all emp attributes:
+		// proof of concept display all emp attributes:
 		Doctor doctorTest = new Doctor("Test Doctor");
 		doctorTest.setSpecialty("Test Specialty");
 		empRoster.addEmployeeToRoster(doctorTest);
@@ -19,7 +19,7 @@ public class UniversityHospitalApp {
 		Doctor doctorTest3 = new Doctor("Test Doctor3");
 		doctorTest3.setSpecialty("Test Specialty3");
 		empRoster.addEmployeeToRoster(doctorTest3);
-		
+
 		Janitor janitorTest = new Janitor("Test Janitor");
 		janitorTest.setSweeping(true);
 		empRoster.addEmployeeToRoster(janitorTest);
@@ -29,57 +29,52 @@ public class UniversityHospitalApp {
 		Janitor janitorTest3 = new Janitor("Test Janitor3");
 		janitorTest3.setSweeping(true);
 		empRoster.addEmployeeToRoster(janitorTest3);
-		
-//		displayAllEmployeeAttributes();
-//		
-//	private static void displayAllEmployeeAttributes() {
+
+		displayAllEmployeeAttributes();
+	}
+
+	private static void displayAllEmployeeAttributes() {
 		String arrayRow = "";
 		System.out.println("ALL HOSPITAL EMPLOYEES:");
-		
+
 		System.out.println("Doctors:");
-		arrayRow = (String.format("|%-17s", "Name"))
-				+ (String.format("|%-10s", "Emp #"))
-				+ (String.format("|%-10s", "Salary"))
-				+ (String.format("|%-10s", "Paid?"))
+		arrayRow = (String.format("|%-17s", "Name")) + (String.format("|%-10s", "Emp #"))
+				+ (String.format("|%-10s", "Salary")) + (String.format("|%-10s", "Paid?"))
 				+ (String.format("|%-20s|", "Specialty"));
 		System.out.println(arrayRow);
 		System.out.println("|-----------------|----------|----------|----------|--------------------|");
 		empRoster.printDoctorAttributes();
 		System.out.println();
-		
-//		System.out.println("Nurses:");
-//		arrayRow = (String.format("|%-17s", "Name"))
-//				 + (String.format("|%-10s", "Emp #"))
-//				 + (String.format("|%-10s", "Salary"))
-//				 + (String.format("|%-10s", "Paid?"))
-//				 + (String.format("|%-14s|", "# of Patients"));
-//		System.out.println(arrayRow);
-//		System.out.println("|-----------------|----------|----------|----------|--------------|");
-//		empRoster.printNurseAttributes();
-//		System.out.println();
-//		
-//		System.out.println("Receptionists:");
-//		arrayRow = (String.format("|%-17s", "Name"))
-//				 + (String.format("|%-10s", "Emp #"))
-//				 + (String.format("|%-10s", "Salary"))
-//				 + (String.format("|%-10s", "Paid?"))
-//				 + (String.format("|%-10s|", "On Phone?"));
-//		System.out.println(arrayRow);
-//		System.out.println("|-----------------|----------|----------|----------|----------|");
-//		empRoster.printReceptionistAttributes();
-//		System.out.println();
-		
+
+		// System.out.println("Nurses:");
+		// arrayRow = (String.format("|%-17s", "Name"))
+		// + (String.format("|%-10s", "Emp #"))
+		// + (String.format("|%-10s", "Salary"))
+		// + (String.format("|%-10s", "Paid?"))
+		// + (String.format("|%-14s|", "# of Patients"));
+		// System.out.println(arrayRow);
+		// System.out.println("|-----------------|----------|----------|----------|--------------|");
+		// empRoster.printNurseAttributes();
+		// System.out.println();
+		//
+		// System.out.println("Receptionists:");
+		// arrayRow = (String.format("|%-17s", "Name"))
+		// + (String.format("|%-10s", "Emp #"))
+		// + (String.format("|%-10s", "Salary"))
+		// + (String.format("|%-10s", "Paid?"))
+		// + (String.format("|%-10s|", "On Phone?"));
+		// System.out.println(arrayRow);
+		// System.out.println("|-----------------|----------|----------|----------|----------|");
+		// empRoster.printReceptionistAttributes();
+		// System.out.println();
+
 		System.out.println("Janitors:");
-		arrayRow = (String.format("|%-17s", "Name"))
-				+ (String.format("|%-10s", "Emp #"))
-				+ (String.format("|%-10s", "Salary"))
-				+ (String.format("|%-10s", "Paid?"))
+		arrayRow = (String.format("|%-17s", "Name")) + (String.format("|%-10s", "Emp #"))
+				+ (String.format("|%-10s", "Salary")) + (String.format("|%-10s", "Paid?"))
 				+ (String.format("|%-13s|", "Is Sweeping?"));
 		System.out.println(arrayRow);
 		System.out.println("|-----------------|----------|----------|----------|-------------|");
 		empRoster.printJanitorAttributes();
 		System.out.println();
 	}
-//	}
-
 }
