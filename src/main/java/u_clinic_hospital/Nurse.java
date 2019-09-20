@@ -8,7 +8,17 @@ public class Nurse extends Employee {
 	public Nurse(String name) {
 		super(name);
 	}
-	
-	
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public int getNumberOfPatients() {
+		return numberOfPatients;
+	}
+
+	public void setNumberOfPatients(int numberToSet) {
+		numberOfPatients = numberToSet;
+	}
 
 }
