@@ -1,7 +1,9 @@
 package u_clinic_hospital;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 
 public class EmployeeRoster {
 
@@ -62,7 +64,7 @@ public class EmployeeRoster {
 						+ (String.format("|%-10d", receptionist.getEmpNumber()))
 						+ (String.format("|%-10d", receptionist.getSalary()))
 						+ (String.format("|%-10b", receptionist.getHasBeenPaid()))
-						+ (String.format("|%-10b|", receptionist.returnsIsAvailable()));
+						+ (String.format("|%-10s|", receptionist.returnsIsAvailable()));
 				System.out.println(arrayRow);
 			}
 		}
@@ -83,6 +85,14 @@ public class EmployeeRoster {
 		}
 	}
 	
-	
-
+	void payAllEmployees() {
+		if (empList.size() == 0) {
+			System.out.println("An error has occured, please enter an employee");
+		}else {
+			for (Employee emp: empList.values()) {
+				emp.paySalary();
+			}
+			System.out.println("All Employees have been Paid.");
+		}
+	}
 }
