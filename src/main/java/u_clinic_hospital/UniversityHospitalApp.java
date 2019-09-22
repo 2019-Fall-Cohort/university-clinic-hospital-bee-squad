@@ -83,9 +83,9 @@ public class UniversityHospitalApp {
 			Receptionist receptionistToAdd = new Receptionist(empName);
 			receptionistToAdd.setEmpNumber(empNumber);
 			if (isAvailableReceptionist == "a") {
-				receptionistToAdd.isNotOnPhone();
+				receptionistToAdd.setIsAvailable(true);
 			} else if (isAvailableReceptionist == "p") {
-				receptionistToAdd.isOnPhone();
+				receptionistToAdd.setIsAvailable(false);
 			} else {
 				System.out.println("An error has occured with the receptionist's availability");
 			}
