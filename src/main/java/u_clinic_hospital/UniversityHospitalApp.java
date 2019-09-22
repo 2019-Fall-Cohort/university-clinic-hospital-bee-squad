@@ -9,46 +9,46 @@ public class UniversityHospitalApp {
 
 	public static void main(String[] args) {
 
-		// proof of concept display all emp attributes:
-		Doctor doctorTest = new Doctor("Test Doctor");
-		doctorTest.setSpecialty("Test Specialty");
-		empRoster.addEmployeeToRoster(doctorTest);
-		Doctor doctorTest2 = new Doctor("Test Doctor2");
-		doctorTest2.setSpecialty("Test Specialty2");
-		empRoster.addEmployeeToRoster(doctorTest2);
-		Doctor doctorTest3 = new Doctor("Test Doctor3");
-		doctorTest3.setSpecialty("Test Specialty3");
-		empRoster.addEmployeeToRoster(doctorTest3);
-		
-		Nurse nurseTest = new Nurse("Test Nurse");
-		nurseTest.setNumberOfPatients(11);
-		empRoster.addEmployeeToRoster(nurseTest);
-		Nurse nurseTest2 = new Nurse("Test Nurse2");
-		nurseTest2.setNumberOfPatients(1);
-		empRoster.addEmployeeToRoster(nurseTest2);
-		Nurse nurseTest3 = new Nurse("Test Nurse3");
-		nurseTest3.setNumberOfPatients(300);
-		empRoster.addEmployeeToRoster(nurseTest3);
-		
-		Receptionist receptionistTest = new Receptionist("Test Receptionist");
-		receptionistTest.setIsAvailable(true);
-		empRoster.addEmployeeToRoster(receptionistTest);
-		Receptionist receptionistTest2 = new Receptionist("Test Receptionist2");
-		receptionistTest2.setIsAvailable(true);
-		empRoster.addEmployeeToRoster(receptionistTest2);
-		Receptionist receptionistTest3 = new Receptionist("Test Receptionist3");
-		receptionistTest3.setIsAvailable(false);
-		empRoster.addEmployeeToRoster(receptionistTest3);
-
-		Janitor janitorTest = new Janitor("Test Janitor");
-		janitorTest.setSweeping(true);
-		empRoster.addEmployeeToRoster(janitorTest);
-		Janitor janitorTest2 = new Janitor("Test Janitor2");
-		janitorTest2.setSweeping(false);
-		empRoster.addEmployeeToRoster(janitorTest2);
-		Janitor janitorTest3 = new Janitor("Test Janitor3");
-		janitorTest3.setSweeping(true);
-		empRoster.addEmployeeToRoster(janitorTest3);
+//		// proof of concept display all emp attributes:
+//		Doctor doctorTest = new Doctor("Test Doctor");
+//		doctorTest.setSpecialty("Test Specialty");
+//		empRoster.addEmployeeToRoster(doctorTest);
+//		Doctor doctorTest2 = new Doctor("Test Doctor2");
+//		doctorTest2.setSpecialty("Test Specialty2");
+//		empRoster.addEmployeeToRoster(doctorTest2);
+//		Doctor doctorTest3 = new Doctor("Test Doctor3");
+//		doctorTest3.setSpecialty("Test Specialty3");
+//		empRoster.addEmployeeToRoster(doctorTest3);
+//		
+//		Nurse nurseTest = new Nurse("Test Nurse");
+//		nurseTest.setNumberOfPatients(11);
+//		empRoster.addEmployeeToRoster(nurseTest);
+//		Nurse nurseTest2 = new Nurse("Test Nurse2");
+//		nurseTest2.setNumberOfPatients(1);
+//		empRoster.addEmployeeToRoster(nurseTest2);
+//		Nurse nurseTest3 = new Nurse("Test Nurse3");
+//		nurseTest3.setNumberOfPatients(300);
+//		empRoster.addEmployeeToRoster(nurseTest3);
+//		
+//		Receptionist receptionistTest = new Receptionist("Test Receptionist");
+//		receptionistTest.setIsAvailable(true);
+//		empRoster.addEmployeeToRoster(receptionistTest);
+//		Receptionist receptionistTest2 = new Receptionist("Test Receptionist2");
+//		receptionistTest2.setIsAvailable(true);
+//		empRoster.addEmployeeToRoster(receptionistTest2);
+//		Receptionist receptionistTest3 = new Receptionist("Test Receptionist3");
+//		receptionistTest3.setIsAvailable(false);
+//		empRoster.addEmployeeToRoster(receptionistTest3);
+//
+//		Janitor janitorTest = new Janitor("Test Janitor");
+//		janitorTest.setSweeping(true);
+//		empRoster.addEmployeeToRoster(janitorTest);
+//		Janitor janitorTest2 = new Janitor("Test Janitor2");
+//		janitorTest2.setSweeping(false);
+//		empRoster.addEmployeeToRoster(janitorTest2);
+//		Janitor janitorTest3 = new Janitor("Test Janitor3");
+//		janitorTest3.setSweeping(true);
+//		empRoster.addEmployeeToRoster(janitorTest3);
 		
 		
 

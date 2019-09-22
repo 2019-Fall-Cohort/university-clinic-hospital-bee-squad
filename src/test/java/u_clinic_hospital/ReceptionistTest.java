@@ -26,7 +26,7 @@ public class ReceptionistTest {
 	@Test
 	public void receptionistIsOnPhone() throws Exception {
 		Receptionist underTest = new Receptionist("Bruce Willis");
-		underTest.isOnPhone();
+		underTest.setIsAvailable(false);
 		boolean expected = underTest.returnsIsAvailable();
 		assertEquals(false, expected);
 	}
@@ -34,7 +34,7 @@ public class ReceptionistTest {
 	@Test
 	public void receptionistIsNotOnPhone() throws Exception {
 		Receptionist underTest = new Receptionist("Soames Forsythe");
-		underTest.isNotOnPhone();
+		underTest.setIsAvailable(true);
 		boolean expected = underTest.returnsIsAvailable();
 		assertEquals(true, expected);
 	}
@@ -45,6 +45,23 @@ public class ReceptionistTest {
 		int expected = underTest.getSalary();
 		assertThat(expected, is(45000));
 	}
+	
+	@Test
+	public void togglesReceptionistIsAvailable() throws Exception {
+		Receptionist underTest = new Receptionist("Nathan Rice");
+		
+		underTest.setIsAvailable(true);
+		underTest.toggleReceptionistIsAvailable();
+		boolean expected = underTest.returnsIsAvailable();
+		assertThat(expected, is(false));
+		
+		underTest.setIsAvailable(false);
+		underTest.toggleReceptionistIsAvailable();
+		boolean expected2 = underTest.returnsIsAvailable();
+		assertThat(expected2, is(true));
+
+	}
+
 	
 }
 	

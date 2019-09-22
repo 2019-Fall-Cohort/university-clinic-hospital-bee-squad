@@ -26,5 +26,9 @@ public class Receptionist extends Employee {
 		return salary;
 	}
 
-	
+	public void toggleReceptionistIsAvailable() {
+		this.isAvailable = !(isAvailable);
+		
+	}
+
 }
