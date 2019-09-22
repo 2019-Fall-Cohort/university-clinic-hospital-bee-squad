@@ -82,12 +82,12 @@ public class UniversityHospitalApp {
 			String isAvailableReceptionist = userInput.nextLine();
 			Receptionist receptionistToAdd = new Receptionist(empName);
 			receptionistToAdd.setEmpNumber(empNumber);
-			if (isAvailableReceptionist == "a") {
+			if (isAvailableReceptionist.equalsIgnoreCase("a")) {
 				receptionistToAdd.setIsAvailable(true);
-			} else if (isAvailableReceptionist == "p") {
+			} else if (isAvailableReceptionist.equalsIgnoreCase("p")) {
 				receptionistToAdd.setIsAvailable(false);
 			} else {
-				System.out.println("An error has occured with the receptionist's availability");
+				System.out.println("An error has occurred with the receptionist's availability");
 			}
 			empRoster.addEmployeeToRoster(receptionistToAdd);
 			break;
@@ -101,7 +101,7 @@ public class UniversityHospitalApp {
 			} else if (isAvailableJanitor == "s") {
 				janitorToAdd.setSweeping(true);
 			} else {
-				System.out.println("An error has occured with the janitor's availability");
+				System.out.println("An error has occurred with the janitor's availability");
 			}
 			empRoster.addEmployeeToRoster(janitorToAdd);
 			break;

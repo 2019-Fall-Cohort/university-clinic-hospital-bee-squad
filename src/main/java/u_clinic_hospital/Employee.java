@@ -4,16 +4,11 @@ public class Employee {
 
 	private String name;
 	private int empNumber;
-	//public int salary;
 	private boolean hasBeenPaid = false;
 
 	public Employee(String name) {
 		this.name = name;
 	}
-
-//	public int getSalary() {
-//		return salary;
-//	}
 	
 	public String getName() {
 		return name;
