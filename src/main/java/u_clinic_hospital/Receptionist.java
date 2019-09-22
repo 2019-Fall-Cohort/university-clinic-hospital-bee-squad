@@ -14,12 +14,8 @@ public class Receptionist extends Employee {
 		return "Receptionist: " + getName();
 	}
 
-	public void isOnPhone() {
-		isAvailable = false;
-	}
-
-	public void isNotOnPhone() {
-		isAvailable = true;
+	public void setIsAvailable(boolean b) {
+		this.isAvailable = b;
 	}
 	
 	public boolean returnsIsAvailable() {
