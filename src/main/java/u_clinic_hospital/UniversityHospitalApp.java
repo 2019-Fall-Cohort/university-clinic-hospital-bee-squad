@@ -82,7 +82,7 @@ public class UniversityHospitalApp {
 			String isAvailableReceptionist = userInput.nextLine();
 			Receptionist receptionistToAdd = new Receptionist(empName);
 			receptionistToAdd.setEmpNumber(empNumber);
-			if (isAvailableReceptionist.equalsIgnoreCase("a")) {
+		if (isAvailableReceptionist.equalsIgnoreCase("a")) {
 				receptionistToAdd.setIsAvailable(true);
 			} else if (isAvailableReceptionist.equalsIgnoreCase("p")) {
 				receptionistToAdd.setIsAvailable(false);
@@ -92,13 +92,13 @@ public class UniversityHospitalApp {
 			empRoster.addEmployeeToRoster(receptionistToAdd);
 			break;
 		case "j":
-			System.out.println("Is " + empName + " (a)vailable or on the (s)weeping?");
+			System.out.println("Is " + empName + " (a)vailable or (s)weeping?");
 			String isAvailableJanitor = userInput.nextLine();
 			Janitor janitorToAdd = new Janitor(empName);
 			janitorToAdd.setEmpNumber(empNumber);
-			if (isAvailableJanitor == "a") {
+			if (isAvailableJanitor.equalsIgnoreCase("a")) {
 				janitorToAdd.setSweeping(false);
-			} else if (isAvailableJanitor == "s") {
+			} else if (isAvailableJanitor.equalsIgnoreCase("s")) {
 				janitorToAdd.setSweeping(true);
 			} else {
 				System.out.println("An error has occurred with the janitor's availability");
