@@ -3,7 +3,7 @@ package u_clinic_hospital;
 public class Receptionist extends Employee {
 
 	private int salary = 45000;
-	private boolean isAvailable = true;
+	private boolean isAvailable;
 	
 	public Receptionist(String name) {
 		super(name);
@@ -15,15 +15,16 @@ public class Receptionist extends Employee {
 	}
 
 	public void isOnPhone() {
-		isAvailable = false;
+		this.isAvailable = false;
 	}
 
 	public void isNotOnPhone() {
-		isAvailable = true;
+		this.isAvailable = true;
 	}
 	
-	public boolean returnsIsAvailable() {
-		return isAvailable;
+	public String returnsIsAvailable() {
+		String returnMe = String.valueOf(isAvailable);
+		return returnMe;
 	}
 
 	public int getSalary() {

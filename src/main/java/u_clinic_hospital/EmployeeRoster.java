@@ -41,34 +41,34 @@ public class EmployeeRoster {
 		}
 	}
 
-//	public void printNurseAttributes() {
-//		String arrayRow = "";
-//		for (Employee thisOne : empList.values()) {
-//			if (thisOne instanceof Nurse) {
-//				Nurse nurse = (Nurse) thisOne;
-//				arrayRow = (String.format("|%-17s", nurse.getName())) + (String.format("|%-10d", nurse.getEmpNumber()))
-//						+ (String.format("|%-10d", nurse.getSalary()))
-//						+ (String.format("|%-10b", nurse.getHasBeenPaid()))
-//						+ (String.format("|%-14d|", nurse.getNumberOfPatients)); // CHECK THIS
-//				System.out.println(arrayRow);
-//			}
-//		}
-//	}
-//
-//	public void printReceptionistAttributes() {
-//		String arrayRow = "";
-//		for (Employee thisOne : empList.values()) {
-//			if (thisOne instanceof Receptionist) {
-//				Receptionist receptionist = (Receptionist) thisOne;
-//				arrayRow = (String.format("|%-17s", receptionist.getName()))
-//						+ (String.format("|%-10d", receptionist.getEmpNumber()))
-//						+ (String.format("|%-10d", receptionist.getSalary()))
-//						+ (String.format("|%-10b", receptionist.getHasBeenPaid()))
-//						+ (String.format("|%-10b|", receptionist.isOnPhoneNotAvailable()));
-//				System.out.println(arrayRow);
-//			}
-//		}
-//	}
+	public void printNurseAttributes() {
+		String arrayRow = "";
+		for (Employee thisOne : empList.values()) {
+			if (thisOne instanceof Nurse) {
+				Nurse nurse = (Nurse) thisOne;
+				arrayRow = (String.format("|%-17s", nurse.getName())) + (String.format("|%-10d", nurse.getEmpNumber()))
+						+ (String.format("|%-10d", nurse.getSalary()))
+						+ (String.format("|%-10b", nurse.getHasBeenPaid()))
+						+ (String.format("|%-14d|", nurse.getNumberOfPatients()));
+				System.out.println(arrayRow);
+			}
+		}
+	}
+
+	public void printReceptionistAttributes() {
+		String arrayRow = "";
+		for (Employee thisOne : empList.values()) {
+			if (thisOne instanceof Receptionist) {
+				Receptionist receptionist = (Receptionist) thisOne;
+				arrayRow = (String.format("|%-17s", receptionist.getName()))
+						+ (String.format("|%-10d", receptionist.getEmpNumber()))
+						+ (String.format("|%-10d", receptionist.getSalary()))
+						+ (String.format("|%-10b", receptionist.getHasBeenPaid()))
+						+ (String.format("|%-10s|", receptionist.returnsIsAvailable()));
+				System.out.println(arrayRow);
+			}
+		}
+	}
 
 	public void printJanitorAttributes() {
 		String arrayRow = "";
@@ -89,13 +89,8 @@ public class EmployeeRoster {
 		if (empList.size() == 0) {
 			System.out.println("An error has occured, please enter an employee");
 		}else {
-			List<String> randomEmpToCheck = new ArrayList<String>(empList.keySet());
-			String checkName = randomEmpToCheck.get(0);
-			Employee checkMyPay = retrieveEmployee(checkName);
-			if (checkMyPay.getHasBeenPaid()) {
-				for (Employee emp : empList.values()) {
-					emp.paySalary();
-				}
+			for (Employee emp: empList.values()) {
+				emp.paySalary();
 			}
 			System.out.println("All Employees have been Paid.");
 		}

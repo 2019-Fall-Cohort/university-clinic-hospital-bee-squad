@@ -22,28 +22,6 @@ public class UniversityHospitalApp {
 			
 		}
 		
-//		// proof of concept display all emp attributes:
-//		Doctor doctorTest = new Doctor("Test Doctor");
-//		doctorTest.setSpecialty("Test Specialty");
-//		empRoster.addEmployeeToRoster(doctorTest);
-//		Doctor doctorTest2 = new Doctor("Test Doctor2");
-//		doctorTest2.setSpecialty("Test Specialty2");
-//		empRoster.addEmployeeToRoster(doctorTest2);
-//		Doctor doctorTest3 = new Doctor("Test Doctor3");
-//		doctorTest3.setSpecialty("Test Specialty3");
-//		empRoster.addEmployeeToRoster(doctorTest3);
-//
-//		Janitor janitorTest = new Janitor("Test Janitor");
-//		janitorTest.setSweeping(true);
-//		empRoster.addEmployeeToRoster(janitorTest);
-//		Janitor janitorTest2 = new Janitor("Test Janitor2");
-//		janitorTest2.setSweeping(false);
-//		empRoster.addEmployeeToRoster(janitorTest2);
-//		Janitor janitorTest3 = new Janitor("Test Janitor3");
-//		janitorTest3.setSweeping(true);
-//		empRoster.addEmployeeToRoster(janitorTest3);
-//
-//		displayAllEmployeeAttributes();
 	}
 
 	private static void determineMainAction() {
@@ -57,12 +35,15 @@ public class UniversityHospitalApp {
 		case 2:
 			displayAllEmployeeAttributes();
 			break;
-		case 3:
-			doctorsPerformRounds();
-		case 4:
-			nursesPerformRounds();
+//		case 3:
+//			doctorsPerformRounds();
+//			break;
+//		case 4:
+//			nursesPerformRounds();
+//			break;
 		case 5:
 			empRoster.payAllEmployees();
+			break;
 		case 6:
 			stayInMenu = false;
 			System.out.println("Thank you.  Have a great day.");
@@ -73,8 +54,58 @@ public class UniversityHospitalApp {
 	private static void addNewEmployee() {
 		System.out.println("What is the employee's name?");
 		String empName = userInput.nextLine();
-		System.out.println("Is " + empName + "a (d)octor, (n)urse, (r)eceptionist, or (j)anitor?");
+		System.out.println("What is the 4-digit employee number?");
+		int empNumber = userInput.nextInt();
+		userInput.nextLine();
+		System.out.println("Is " + empName + " a (d)octor, (n)urse, (r)eceptionist, or (j)anitor?");
 		String empJobTitle = userInput.nextLine();
+		
+		switch (empJobTitle) {
+		case "d":
+			System.out.println("What is Dr. " + empName + "'s specialty?");
+			String empSpecialty = userInput.nextLine();
+			Doctor doctorToAdd = new Doctor(empName);
+			doctorToAdd.setEmpNumber(empNumber);
+			doctorToAdd.setSpecialty(empSpecialty);
+			empRoster.addEmployeeToRoster(doctorToAdd);
+			break;
+		case "n":
+			System.out.println("How many patients does " + empName + " have?");
+			int empNumberOfPatients = userInput.nextInt();
+			Nurse nurseToAdd = new Nurse(empName);
+			nurseToAdd.setEmpNumber(empNumber);
+			nurseToAdd.setNumberOfPatients(empNumberOfPatients);
+			empRoster.addEmployeeToRoster(nurseToAdd);
+			break;
+		case "r":
+			System.out.println("Is " + empName + " (a)vailable or on the (p)hone?");
+			String isAvailableReceptionist = userInput.nextLine();
+			Receptionist receptionistToAdd = new Receptionist(empName);
+			receptionistToAdd.setEmpNumber(empNumber);
+			if (isAvailableReceptionist == "a") {
+				receptionistToAdd.isNotOnPhone();
+			} else if (isAvailableReceptionist == "p") {
+				receptionistToAdd.isOnPhone();
+			} else {
+				System.out.println("An error has occured with the receptionist's availability");
+			}
+			empRoster.addEmployeeToRoster(receptionistToAdd);
+			break;
+		case "j":
+			System.out.println("Is " + empName + " (a)vailable or on the (s)weeping?");
+			String isAvailableJanitor = userInput.nextLine();
+			Janitor janitorToAdd = new Janitor(empName);
+			janitorToAdd.setEmpNumber(empNumber);
+			if (isAvailableJanitor == "a") {
+				janitorToAdd.setSweeping(false);
+			} else if (isAvailableJanitor == "s") {
+				janitorToAdd.setSweeping(true);
+			} else {
+				System.out.println("An error has occured with the janitor's availability");
+			}
+			empRoster.addEmployeeToRoster(janitorToAdd);
+			break;
+		}
 	}
 
 	private static void displayMainMenu() {
@@ -100,32 +131,32 @@ public class UniversityHospitalApp {
 		empRoster.printDoctorAttributes();
 		System.out.println();
 
-		// System.out.println("Nurses:");
-		// arrayRow = (String.format("|%-17s", "Name"))
-		// + (String.format("|%-10s", "Emp #"))
-		// + (String.format("|%-10s", "Salary"))
-		// + (String.format("|%-10s", "Paid?"))
-		// + (String.format("|%-14s|", "# of Patients"));
-		// System.out.println(arrayRow);
-		// System.out.println("|-----------------|----------|----------|----------|--------------|");
-		// empRoster.printNurseAttributes();
-		// System.out.println();
-		//
-		// System.out.println("Receptionists:");
-		// arrayRow = (String.format("|%-17s", "Name"))
-		// + (String.format("|%-10s", "Emp #"))
-		// + (String.format("|%-10s", "Salary"))
-		// + (String.format("|%-10s", "Paid?"))
-		// + (String.format("|%-10s|", "On Phone?"));
-		// System.out.println(arrayRow);
-		// System.out.println("|-----------------|----------|----------|----------|----------|");
-		// empRoster.printReceptionistAttributes();
-		// System.out.println();
+		 System.out.println("Nurses:");
+		 arrayRow = (String.format("|%-17s", "Name"))
+		 + (String.format("|%-10s", "Emp #"))
+		 + (String.format("|%-10s", "Salary"))
+		 + (String.format("|%-10s", "Paid?"))
+		 + (String.format("|%-14s|", "# of Patients"));
+		 System.out.println(arrayRow);
+		 System.out.println("|-----------------|----------|----------|----------|--------------|");
+		 empRoster.printNurseAttributes();
+		 System.out.println();
+		
+		 System.out.println("Receptionists:");
+		 arrayRow = (String.format("|%-17s", "Name"))
+		 + (String.format("|%-10s", "Emp #"))
+		 + (String.format("|%-10s", "Salary"))
+		 + (String.format("|%-10s", "Paid?"))
+		 + (String.format("|%-10s|", "On Phone?"));
+		 System.out.println(arrayRow);
+		 System.out.println("|-----------------|----------|----------|----------|----------|");
+		 empRoster.printReceptionistAttributes();
+		 System.out.println();
 
 		System.out.println("Janitors:");
 		arrayRow = (String.format("|%-17s", "Name")) + (String.format("|%-10s", "Emp #"))
 				+ (String.format("|%-10s", "Salary")) + (String.format("|%-10s", "Paid?"))
-				+ (String.format("|%-13s|", "Is Sweeping?"));
+				+ (String.format("|%-13s|", "Sweeping?"));
 		System.out.println(arrayRow);
 		System.out.println("|-----------------|----------|----------|----------|-------------|");
 		empRoster.printJanitorAttributes();
