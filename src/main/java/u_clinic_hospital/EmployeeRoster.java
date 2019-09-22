@@ -1,7 +1,9 @@
 package u_clinic_hospital;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 
 public class EmployeeRoster {
 
@@ -83,6 +85,19 @@ public class EmployeeRoster {
 		}
 	}
 	
-	
-
+	void payAllEmployees() {
+		if (empList.size() == 0) {
+			System.out.println("An error has occured, please enter an employee");
+		}else {
+			List<String> randomEmpToCheck = new ArrayList<String>(empList.keySet());
+			String checkName = randomEmpToCheck.get(0);
+			Employee checkMyPay = retrieveEmployee(checkName);
+			if (checkMyPay.getHasBeenPaid()) {
+				for (Employee emp : empList.values()) {
+					emp.paySalary();
+				}
+			}
+			System.out.println("All Employees have been Paid.");
+		}
+	}
 }

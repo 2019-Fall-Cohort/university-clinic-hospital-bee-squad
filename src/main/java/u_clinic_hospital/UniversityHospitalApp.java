@@ -1,5 +1,7 @@
 package u_clinic_hospital;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class UniversityHospitalApp {
@@ -60,12 +62,19 @@ public class UniversityHospitalApp {
 		case 4:
 			nursesPerformRounds();
 		case 5:
-			payAllEmployees();
+			empRoster.payAllEmployees();
 		case 6:
 			stayInMenu = false;
 			System.out.println("Thank you.  Have a great day.");
 			System.exit(0);
 		}
+	}
+
+	private static void addNewEmployee() {
+		System.out.println("What is the employee's name?");
+		String empName = userInput.nextLine();
+		System.out.println("Is " + empName + "a (d)octor, (n)urse, (r)eceptionist, or (j)anitor?");
+		String empJobTitle = userInput.nextLine();
 	}
 
 	private static void displayMainMenu() {
