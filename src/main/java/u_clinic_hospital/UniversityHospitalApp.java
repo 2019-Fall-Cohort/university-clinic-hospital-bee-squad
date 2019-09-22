@@ -107,7 +107,7 @@ public class UniversityHospitalApp {
 			break;
 		}
 	}
-
+  
 	private static void displayMainMenu() {
 		System.out.println("Please select an option:");
 		System.out.println("1:  Add an Employee");
@@ -148,6 +148,7 @@ public class UniversityHospitalApp {
 		 + (String.format("|%-10s", "Salary"))
 		 + (String.format("|%-10s", "Paid?"))
 		 + (String.format("|%-10s|", "On Phone?"));
+
 		 System.out.println(arrayRow);
 		 System.out.println("|-----------------|----------|----------|----------|----------|");
 		 empRoster.printReceptionistAttributes();
