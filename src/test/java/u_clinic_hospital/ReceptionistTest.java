@@ -46,5 +46,18 @@ public class ReceptionistTest {
 		assertThat(expected, is(45000));
 	}
 	
+	@Test
+	public void canGetValueOfReceptionistIsAvailable() {
+		Receptionist underTest = new Receptionist("Gandhi");
+		
+		underTest.setIsAvailable(true);
+		boolean expected = underTest.getIsAvailable();
+		assertThat(expected, is(true));
+		
+		underTest.setIsAvailable(false);
+		boolean expected2 = underTest.getIsAvailable();
+		assertThat(expected2, is(false));
+	}
+	
 }
 	

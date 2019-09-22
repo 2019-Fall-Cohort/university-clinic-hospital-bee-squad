@@ -27,5 +27,8 @@ public class Receptionist extends Employee {
 		return salary;
 	}
 
-	
+	public boolean getIsAvailable() {
+		return isAvailable;
+	}
+
 }
