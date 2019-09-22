@@ -26,17 +26,17 @@ public class ReceptionistTest {
 	@Test
 	public void receptionistIsOnPhone() throws Exception {
 		Receptionist underTest = new Receptionist("Bruce Willis");
-		underTest.isOnPhone();
-		boolean expected = underTest.returnsIsAvailable();
-		assertEquals(false, expected);
+		underTest.setIsAvailable(false);
+		String expected = underTest.returnsIsAvailable();
+		assertThat(expected, is("false"));
 	}
 	
 	@Test
 	public void receptionistIsNotOnPhone() throws Exception {
 		Receptionist underTest = new Receptionist("Soames Forsythe");
-		underTest.isNotOnPhone();
-		boolean expected = underTest.returnsIsAvailable();
-		assertEquals(true, expected);
+		underTest.setIsAvailable(true);
+		String expected = underTest.returnsIsAvailable();
+		assertThat(expected, is("true"));
 	}
 	
 	@Test
