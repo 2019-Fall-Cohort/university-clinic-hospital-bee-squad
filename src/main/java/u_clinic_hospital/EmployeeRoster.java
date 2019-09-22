@@ -64,7 +64,7 @@ public class EmployeeRoster {
 						+ (String.format("|%-10d", receptionist.getEmpNumber()))
 						+ (String.format("|%-10d", receptionist.getSalary()))
 						+ (String.format("|%-10b", receptionist.getHasBeenPaid()))
-						+ (String.format("|%-10s|", receptionist.returnsIsAvailable()));
+						+ (String.format("|%-10s|", !(receptionist.getIsAvailable())));
 				System.out.println(arrayRow);
 			}
 		}
