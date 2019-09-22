@@ -27,4 +27,20 @@ public class JanitorTest {
 		boolean isJanitorSweeping = underTest.getSweeping();
 		assertThat(isJanitorSweeping, is(false));
 	}
+	
+	@Test
+	public void togglesJanitorSweeping() throws Exception {
+		Janitor underTest = new Janitor("Happy Janitor");
+		
+		underTest.setSweeping(true);
+		underTest.toggleJanitorSweeping();
+		boolean expected = underTest.getSweeping();
+		assertThat(expected, is(false));
+		
+		underTest.setSweeping(false);
+		underTest.toggleJanitorSweeping();
+		boolean expected2 = underTest.getSweeping();
+		assertThat(expected2, is(true));
+	}
+	
 }

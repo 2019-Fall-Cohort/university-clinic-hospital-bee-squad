@@ -59,9 +59,7 @@ public class ReceptionistTest {
 		underTest.toggleReceptionistIsAvailable();
 		boolean expected2 = underTest.returnsIsAvailable();
 		assertThat(expected2, is(true));
-
 	}
 
-	
 }
 	

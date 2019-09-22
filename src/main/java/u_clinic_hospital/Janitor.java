@@ -20,4 +20,8 @@ public class Janitor extends Employee {
 	public int getSalary() {
 		return salary;
 	}
+
+	public void toggleJanitorSweeping() {
+		this.sweeping = !(sweeping);
+	}
 }
