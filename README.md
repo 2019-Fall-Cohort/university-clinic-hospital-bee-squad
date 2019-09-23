@@ -16,12 +16,13 @@ Upon running the application, the following will be true.
         +Salary
         +Whether or not they have been paid
     - there are 4 classes of employees
-        +Doctors are paid $90k and will further require a user input for Specialty
-        +Nurses are paid $50k and will further require a user input for Number Of Patients in their care
-        +Receptionists are paid $45k and will further require a user input for whether or not they are on the phone
-        +Janitors are paid $40k and will further require a user input for whether or not they are sweeping
+        +Doctors are paid $90k and will require further user input for Specialty
+        +Nurses are paid $50k and will require further user input for Number Of Patients in their care
+        +Receptionists are paid $45k and will require further user input for whether or not they are on the phone
+        +Janitors are paid $40k and will require further user input for whether or not they are sweeping
 - A PatientGroup will be initiated with 3 default patients.
-    - each patient, both default and user added, will start with a Blood Level of 20 and a Health Level of 10
+    - The user will have the option to add more patients
+    - Each patient, both default and user added, will start with a Blood Level of 20 and a Health Level of 10
 
 ### Functions
 With the guidance of on-screen prompts, the user will have the ability to
