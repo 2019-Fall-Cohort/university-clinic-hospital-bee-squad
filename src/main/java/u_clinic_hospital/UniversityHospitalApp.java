@@ -15,6 +15,22 @@ public class UniversityHospitalApp {
 		
 		System.out.println("Welcome to the University Hospital");
 		System.out.println();
+		
+		PatientGroup examplePatients = new PatientGroup();
+		System.out.println("How many patients do you want to add?");
+		int numberOfPatients = userInput.nextInt();
+		userInput.nextLine();
+		int i;
+		for (i=0; i < numberOfPatients; i++) {
+			System.out.println("Please type the name of a patient to add:");
+			String patientName = userInput.nextLine();
+			Patient thisPatient = new Patient(patientName);
+			examplePatients.addPatientToGroup(thisPatient);
+		}
+		System.out.println("You have now added " + numberOfPatients +
+				" patients to your list of patients.");
+		System.out.println();
+		
 		stayInMenu = true;
 		while (stayInMenu) {
 			displayMainMenu();

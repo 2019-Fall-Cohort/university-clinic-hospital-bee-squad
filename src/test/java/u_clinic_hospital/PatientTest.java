@@ -43,7 +43,7 @@ public class PatientTest {
 		testNurse.drawBlood(underTest, 4);
 		int underTestBloodLevel = underTest.getBloodLevel();
 		int underTestHealthLevel = underTest.getHealthLevel();
-		assertThat(underTestBloodLevel, is(16));
+		assertThat(underTestBloodLevel, is(12));
 		assertThat(underTestHealthLevel, is(14));
 	}
 }
