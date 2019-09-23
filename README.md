@@ -30,4 +30,13 @@ The user will have the ability to
         
 ### Concepts Used in This Module
 
+BASE CLASS = Superclass = Parent class: This is a class that another class inherits member variables and/or methods from.
+
+DERIVED CLASS = Subclass = Child class: This is a class that inherits member variables and/or methods from a Base class.
+
+A derived class can OVERRIDE a method and/or a member variable from a superclass from which it inherits. An instance of the derived class will perform the method as the OVERRIDE in the derived class, not as in the superclass. This allows "polymorphism", i.e., more specific methods in the derived class that apply only to it.
+
+A VIRTUAL METHOD is one that overrides the corresponding method in the superclass.
+
+The concept of ABSTRACTION is one of the 4 major concepts (APIE) of object-oriented programming. Concepts in the real world are "abstracted out" and made into a more abstract object. For example, the Employee class is a more abstract class because it can encompass the more specific classes of Nurse, Doctor, etc.
                 
