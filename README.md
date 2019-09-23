@@ -7,7 +7,7 @@
 - Barbara Taylor
 - Brian Bross
 
-### Defaults 
+### Defaults and Classes
 Upon running the application, the following will be true.
 - An empty EmployeeRoster will be initiated.  The user will be prompted to enter employee information.  If no employees are entered, some of the functions with produce an error and return the user to the main menu.
     -All employees will have the following characteristics:
@@ -24,9 +24,15 @@ Upon running the application, the following will be true.
     - each patient, both default and user added, will start with a Blood Level of 20 and a Health Level of 10
 
 ### Functions
-The user will have the ability to
-    -Add an employee
-        +on screen prompts will guide the user through the necessary steps.
+With the guidance of on-screen prompts, the user will have the ability to
+    -Add an employee to the roster
+    -Admit another patient to the hospital
+    -Check the employee roster
+    -Send all Doctors on their rounds
+        +When doctors do blood work, they draw 1 unit of blood and increase the patients health level by 2x
+    -Send all Nurses on their rounds
+        +When nursees do blood work, they draw 2 units of blood and increase the patients health level by 1x
+    -Pay all employees
         
 ### Concepts Used in This Module
 
