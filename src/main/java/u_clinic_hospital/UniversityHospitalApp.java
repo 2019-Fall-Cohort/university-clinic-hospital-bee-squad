@@ -13,7 +13,7 @@ public class UniversityHospitalApp {
 		
 		System.out.println("Welcome to the University Hospital");
 		System.out.println();
-		
+	// this block!	
 		PatientGroup examplePatients = new PatientGroup();
 		System.out.println("How many patients do you want to add?");
 		int numberOfPatients = userInput.nextInt();
@@ -28,6 +28,8 @@ public class UniversityHospitalApp {
 		System.out.println("You have now added " + numberOfPatients +
 				" patients to your list of patients.");
 		System.out.println();
+	// to here.
+		
 		
 		stayInMenu = true;
 		while (stayInMenu) {
@@ -68,11 +70,12 @@ public class UniversityHospitalApp {
 	private static void displayMainMenu() {
 		System.out.println("Please select an option:");
 		System.out.println("1:  Add an Employee");
-		System.out.println("2:  Check Employee Roster");
-		System.out.println("3:  Send all Doctors on their rounds");
-		System.out.println("4:  Send all Nurses on their rounds");
-		System.out.println("5:  Pay all employees");
-		System.out.println("6:  Exit application.");
+		System.out.println("2:  Add another Patient (3 added as defaults)");
+		System.out.println("3:  Check Employee Roster");
+		System.out.println("4:  Send all Doctors on their rounds");
+		System.out.println("5:  Send all Nurses on their rounds");
+		System.out.println("6:  Pay all employees");
+		System.out.println("7:  Exit application.");
 	}
 
 	private static void addNewEmployee() {
