@@ -6,7 +6,7 @@ public class UniversityHospitalApp {
 
 	static EmployeeRoster empRoster = new EmployeeRoster();
 	private static Scanner userInput = new Scanner(System.in);
-	static PatientGroup admittedPatients = new PatientGroup();
+	public static PatientGroup admittedPatients = new PatientGroup();
 	static boolean stayInMenu = true;
 
 	public static void main(String[] args) {
@@ -39,9 +39,9 @@ public class UniversityHospitalApp {
 		// case 4:
 		// doctorsPerformRounds();
 		// break;
-		// case 5:
-		// nursesPerformRounds();
-		// break;
+		case 5:
+			nursesPerformRounds();
+			break;
 		case 6:
 			empRoster.payAllEmployees();
 			break;
@@ -49,6 +49,14 @@ public class UniversityHospitalApp {
 			stayInMenu = false;
 			System.out.println("Thank you.  Have a great day.");
 			System.exit(0);
+		}
+	}
+
+	private static void nursesPerformRounds() {
+		for (Patient thisPatient : admittedPatients.retrievePatientList()) {
+			Nurse doRounds = new Nurse(null);
+			doRounds.drawBlood(thisPatient, 1);
+			displayPatientAttributes();
 		}
 	}
 
