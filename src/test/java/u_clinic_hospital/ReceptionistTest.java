@@ -3,9 +3,6 @@ package u_clinic_hospital;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
-import org.hamcrest.Matchers.*;
-import org.hamcrest.CoreMatchers.*;
-import org.hamcrest.comparator.*;
 import org.junit.Test;
 
 public class ReceptionistTest {

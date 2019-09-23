@@ -1,7 +1,5 @@
 package u_clinic_hospital;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class UniversityHospitalApp {
@@ -66,6 +64,16 @@ public class UniversityHospitalApp {
 			System.exit(0);
 		}
 	}
+	
+	private static void displayMainMenu() {
+		System.out.println("Please select an option:");
+		System.out.println("1:  Add an Employee");
+		System.out.println("2:  Check Employee Roster");
+		System.out.println("3:  Send all Doctors on their rounds");
+		System.out.println("4:  Send all Nurses on their rounds");
+		System.out.println("5:  Pay all employees");
+		System.out.println("6:  Exit application.");
+	}
 
 	private static void addNewEmployee() {
 		System.out.println("What is the employee's name?");
@@ -124,16 +132,6 @@ public class UniversityHospitalApp {
 		}
 	}
   
-	private static void displayMainMenu() {
-		System.out.println("Please select an option:");
-		System.out.println("1:  Add an Employee");
-		System.out.println("2:  Check Employee Roster");
-		System.out.println("3:  Send all Doctors on their rounds");
-		System.out.println("4:  Send all Nurses on their rounds");
-		System.out.println("5:  Pay all employees");
-		System.out.println("6:  Exit application.");
-	}
-
 	private static void displayAllEmployeeAttributes() {
 		String arrayRow = "";
 		System.out.println("ALL HOSPITAL EMPLOYEES:");
