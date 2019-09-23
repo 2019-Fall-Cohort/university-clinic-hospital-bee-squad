@@ -6,7 +6,7 @@ public class UniversityHospitalApp {
 
 	static EmployeeRoster empRoster = new EmployeeRoster();
 	private static Scanner userInput = new Scanner(System.in);
-	static PatientGroup admittedPatients = new PatientGroup();
+	public static PatientGroup admittedPatients = new PatientGroup();
 	static boolean stayInMenu = true;
 
 	public static void main(String[] args) {
@@ -36,12 +36,12 @@ public class UniversityHospitalApp {
 		case 3:
 			displayAllEmployeeAttributes();
 			break;
-		// case 4:
-		// doctorsPerformRounds();
-		// break;
-		// case 5:
-		// nursesPerformRounds();
-		// break;
+		case 4:
+			doctorsPerformRounds();
+			break;
+		case 5:
+			nursesPerformRounds();
+			break;
 		case 6:
 			empRoster.payAllEmployees();
 			break;
@@ -50,6 +50,26 @@ public class UniversityHospitalApp {
 			System.out.println("Thank you.  Have a great day.");
 			System.exit(0);
 		}
+	}
+
+	private static void doctorsPerformRounds() {
+		for (Patient thisPatient : admittedPatients.retrievePatientList()) {
+			Doctor doRounds = new Doctor(null);
+			doRounds.drawBlood(thisPatient, 1);
+		}
+		System.out.println("Doctors have completed their rounds.");
+		System.out.println("Here are the new attributes for the");
+		displayPatientAttributes();
+	}
+
+	private static void nursesPerformRounds() {
+		for (Patient thisPatient : admittedPatients.retrievePatientList()) {
+			Nurse doRounds = new Nurse(null);
+			doRounds.drawBlood(thisPatient, 1);
+		}
+		System.out.println("Nurses have completed their rounds.");
+		System.out.println("Here are the new attributes for the");
+		displayPatientAttributes();
 	}
 
 	private static void addAnotherPatient() {
