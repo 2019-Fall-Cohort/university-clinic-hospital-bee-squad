@@ -36,9 +36,9 @@ public class UniversityHospitalApp {
 		case 3:
 			displayAllEmployeeAttributes();
 			break;
-		// case 4:
-		// doctorsPerformRounds();
-		// break;
+		case 4:
+			doctorsPerformRounds();
+			break;
 		case 5:
 			nursesPerformRounds();
 			break;
@@ -52,12 +52,24 @@ public class UniversityHospitalApp {
 		}
 	}
 
+	private static void doctorsPerformRounds() {
+		for (Patient thisPatient : admittedPatients.retrievePatientList()) {
+			Doctor doRounds = new Doctor(null);
+			doRounds.drawBlood(thisPatient, 1);
+		}
+		System.out.println("Doctors have completed their rounds.");
+		System.out.println("Here are the new attributes for the");
+		displayPatientAttributes();
+	}
+
 	private static void nursesPerformRounds() {
 		for (Patient thisPatient : admittedPatients.retrievePatientList()) {
 			Nurse doRounds = new Nurse(null);
 			doRounds.drawBlood(thisPatient, 1);
-			displayPatientAttributes();
 		}
+		System.out.println("Nurses have completed their rounds.");
+		System.out.println("Here are the new attributes for the");
+		displayPatientAttributes();
 	}
 
 	private static void addAnotherPatient() {
